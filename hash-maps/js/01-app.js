@@ -1,24 +1,8 @@
-var hashmap = new Map();
+import { HashMap } from "./clases.js";
 
-hashmap.set("1", 700);
-hashmap.set("2", [1, 2, 3]);
-hashmap.set("3", "This is a string");
-hashmap.set("4", () => {
-  console.log("Hello World");
-});
+const hm = new HashMap();
 
-console.log(hashmap);
-
-console.log(hashmap);
-
-console.log(hashmap.size);
-//O(1)
-console.log(hashmap.has("nombre2"));
-//O(1)
-console.log(hashmap.get("nombre"));
-//O(1)
-hashmap.delete("saldo");
-//O(n)
-hashmap.forEach((element) => {
-  document.write("<br>" + element);
-});
+console.log(hm.set(1, "Canada")); // [ 'Canada', 300 ]
+console.log(hm.set(2, "France")); // [ 'France', 100 ]
+console.log(hm.set(3, "Spain")); // [ 'Spain', 110 ]
+console.log(hm.hash(3)); // [ 'Spain', 110 ]
